@@ -1,0 +1,212 @@
+/* 배경 */
+div#wrapper {
+  padding: 0;
+}
+
+.bg-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/en/bg_field.png");
+  background-position: top center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.bee {
+  position: absolute;
+  top: 120px;
+  left: 920px;
+  z-index: 5;
+}
+
+.honeycomb {
+  position: absolute;
+  top: 230px;
+  right: 50px;
+}
+
+.ans_left {
+  position: absolute;
+  top: 290px;
+  left: 305px;
+}
+
+.ans_right {
+  position: absolute;
+  top: 386px;
+  left: 708px;
+}
+
+.ans_left .answer {
+  top: 50px;
+}
+
+.ans_right .answer {
+  top: 20px;
+}
+
+.answer {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 186px;
+  border-radius: 186px;
+  background-color: #fff;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100px;
+  box-shadow: 0px 10px 0 #00000030;
+  box-sizing: border-box;
+  font-family: "Lexend", "Pretendard";
+  font-size: 40px;
+  line-height: 45px;
+  font-weight: 900;
+  color: #4e4e4e;
+}
+
+.ans_list button.answer:hover {
+  box-shadow: 0px 10px 0 #00000030;
+}
+
+.ans_right .answer.success {
+  border: 10px solid #2ec7ff;
+  color: #149ed1;
+}
+
+.ans_right .answer.fail {
+  border: 10px solid #ff627c;
+  color: #ff4d6a;
+}
+
+.ans_left .answer.fail {
+  border: 10px solid #ff627c;
+  color: #ff4d6a;
+}
+
+.ans_left .answer.success {
+  border: 10px solid #2ec7ff;
+  color: #149ed1;
+}
+
+.ox {
+  width: 186px;
+  background-size: 100px;
+}
+
+.ans_left .ox {
+  background-image: url("../img/en/ans_o.png");
+}
+
+.ans_right .ox {
+  background-image: url("../img/en/ans_x.png");
+}
+
+.text {
+  width: 330px;
+  padding: 0 40px;
+}
+
+.img {
+  width: 241px;
+  height: 241px;
+}
+
+.ans_left .img {
+  top: 20px;
+}
+
+.ans_right .img {
+  top: -30px;
+}
+
+/* 문제 단락 */
+.quiz_content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 235px;
+}
+
+.quiz_content .quiz_text {
+  position: absolute;
+  top: 90px;
+  left: 40px;
+  width: 700px;
+  font-family: "Lexend", "Pretendard";
+  font-weight: 900;
+  font-size: 46px;
+  line-height: 62px;
+  word-break: keep-all;
+  color: #fff;
+}
+
+.quiz_content .sound {
+  position: absolute;
+  top: 220px;
+  left: 1110px;
+  width: 99px;
+  height: 109px;
+  background: 50% 50% / 100% url("../img/en/sound_btn.png") no-repeat;
+  z-index: 2;
+}
+
+.quiz_content .sound.notice_text::before {
+  position: absolute;
+  top: 20px;
+  left: 120px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 295px;
+  height: 70px;
+  background: #fff;
+  color: #7d2eff;
+  font-family: "Pretendard";
+  font-size: 30px;
+  font-weight: 700;
+  content: "듣고 문제를 푸세요";
+  border-radius: 20px;
+  outline: 10px dotted #7d2eff;
+  outline-offset: -5px;
+}
+
+.sound.notice_text.active::before {
+  display: flex;
+}
+
+.quiz_content button.sound:hover {
+  box-shadow: none;
+}
+
+.quiz_content .add_text {
+  position: absolute;
+  top: 90px;
+  left: 1080px;
+  display: block;
+  width: 577px;
+  height: 160px;
+  padding: 40px 40px 40px 80px;
+  background: center / 100% url("../img/en/sound_text_box.png") no-repeat;
+  font-family: "Lexend", "Pretendard";
+  font-weight: 900;
+  color: #069449;
+  font-size: 34px;
+  word-break: keep-all;
+  line-height: 40px;
+  letter-spacing: -0.5px;
+}
+
+.quiz_content .add_text .square {
+  display: inline-flex;
+  width: 80px;
+  height: 34px;
+  margin-bottom: -5px;
+  border: 2px solid #069449;
+}

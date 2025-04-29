@@ -1,0 +1,161 @@
+@charset "utf-8";
+
+#wrap {
+  position: absolute;
+  width: 1660px;
+  height: 803px;
+  margin: 0 auto;
+}
+
+#container {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.home_page {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
+}
+
+.home_page h1 {
+  padding-top: 210px;
+  font-size: 110px;
+  font-family: "GmarketSans";
+  font-weight: 700;
+  letter-spacing: -4px;
+  text-align: center;
+  color: #fff;
+}
+
+.home_page .head_01 {
+  display: inline-block;
+  text-shadow: 0 4px 4px #00000025;
+  margin-right: 10px;
+}
+
+.home_page .start {
+  display: inline-flex;
+  width: 236px;
+  height: 94px;
+  margin: 205px auto 0;
+  border-radius: 80px;
+  font-size: 0;
+  cursor: pointer;
+}
+
+.game_page,
+.end_page {
+  position: relative;
+  display: none;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  height: 100%;
+}
+
+.game_page h2,
+.end_page h2 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  width: 442px;
+  height: 70px;
+  margin-top: 25px;
+  box-sizing: border-box;
+  font-size: 0;
+}
+
+.how_btn {
+  position: absolute;
+  top: 25px;
+  right: 70px;
+  width: 67px;
+  height: 67px;
+  background: 50% 50% /50% no-repeat url("../img/qr_tmp/how_text.png") #f26829;
+  border-radius: 50%;
+  box-shadow: 4px 4px 0 #ffa369;
+  border: 3px solid #fff;
+  color: #fff;
+  font-size: 0px;
+  cursor: pointer;
+  word-break: keep-all;
+  z-index: 5;
+}
+
+.quiz_top {
+  display: flex;
+}
+
+.quiz_para {
+  font-family: "GmarketSans";
+}
+
+.answer {
+  display: flex;
+  align-items: flex-start;
+  padding: 60px;
+  background: #fff;
+  scrollbar-width: 12px;
+}
+
+.answer::-webkit-scrollbar {
+  width: 12px;
+  height: 197px;
+}
+
+.answer::-webkit-scrollbar-thumb {
+  position: absolute;
+  right: -100px;
+  top: 140px;
+  border-radius: 20px;
+  background: #888888;
+}
+
+.answer::-webkit-scrollbar-button:vertical:start:decrement,
+.answer::-webkit-scrollbar-button:vertical:start:increment {
+  display: block;
+  height: 30px;
+}
+
+.answer h3 {
+  font-size: 40px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.ans_list {
+  list-style: none;
+}
+
+.ans_list li {
+  font-size: 32px;
+  font-weight: 500;
+  word-break: keep-all;
+  letter-spacing: -1px;
+  margin-left: 45px;
+}
+
+.ans_list li:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.ans_list strong {
+  position: relative;
+  display: inline-block;
+  font-weight: 500;
+}
+
+.ans_list strong::before {
+  position: absolute;
+  top: 0;
+  left: -45px;
+  width: 30px;
+  height: 30px;
+  border-radius: 10px;
+  display: block;
+  content: "";
+}

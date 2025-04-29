@@ -1,0 +1,247 @@
+@charset "UTF-8";
+
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css');
+
+/* Noto Sans KR (한글) */
+@font-face {
+  font-family: 'NotoSansKR';
+  font-style: normal;
+  font-weight: 100;
+  src: url('https://cdn.smart-aidt.com/azure/contents/resources/common_font/NotoSansKR-Thin.woff2') format('woff2');
+  font-display: fallback;
+}
+@font-face {
+  font-family: 'NotoSansKR';
+  font-style: normal;
+  font-weight: 200;
+  src: url('https://cdn.smart-aidt.com/azure/contents/resources/common_font/NotoSansKR-ExtraLight.woff2') format('woff2');
+  font-display: fallback;
+}
+@font-face {
+  font-family: 'NotoSansKR';
+  font-style: normal;
+  font-weight: 300;
+  src: url('https://cdn.smart-aidt.com/azure/contents/resources/common_font/NotoSansKR-Light.woff2') format('woff2');
+  font-display: fallback;
+}
+@font-face {
+  font-family: 'NotoSansKR';
+  font-style: normal;
+  font-weight: 400;
+  src: url('https://cdn.smart-aidt.com/azure/contents/resources/common_font/NotoSansKR-Regular.woff2') format('woff2');
+  font-display: fallback;
+}
+@font-face {
+  font-family: 'NotoSansKR';
+  font-style: normal;
+  font-weight: 500;
+  src: url('https://cdn.smart-aidt.com/azure/contents/resources/common_font/NotoSansKR-Medium.woff2') format('woff2');
+  font-display: fallback;
+}
+@font-face {
+  font-family: 'NotoSansKR';
+  font-style: normal;
+  font-weight: 600;
+  src: url('https://cdn.smart-aidt.com/azure/contents/resources/common_font/NotoSansKR-SemiBold.woff2') format('woff2');
+  font-display: fallback;
+}
+@font-face {
+  font-family: 'NotoSansKR';
+  font-style: normal;
+  font-weight: 700;
+  src: url('https://cdn.smart-aidt.com/azure/contents/resources/common_font/NotoSansKR-Bold.woff2') format('woff2');
+  font-display: fallback;
+}
+@font-face {
+  font-family: 'NotoSansKR';
+  font-style: normal;
+  font-weight: 800;
+  src: url('https://cdn.smart-aidt.com/azure/contents/resources/common_font/NotoSansKR-ExtraBold.woff2') format('woff2');
+  font-display: fallback;
+}
+@font-face {
+  font-family: 'NotoSansKR';
+  font-style: normal;
+  font-weight: 900;
+  src: url('https://cdn.smart-aidt.com/azure/contents/resources/common_font/NotoSansKR-Black.woff2') format('woff2');
+  font-display: fallback;
+}
+
+@font-face {
+  font-family: 'MalgunGothic';
+  src: local('Malgun Gothic');
+  font-display: swap;
+  unicode-range: U+3008-3011, U+3014-301B, U+301D-301F;
+}
+
+/* 나눔명조 (숫자/수식/단위) */
+/* @font-face {
+  font-family: 'NanumMJ';
+  font-style: normal;
+  font-weight: 500;
+  src: url('https://cdn.smart-aidt.com/azure/contents/resources/common_font/NanumMyeongjoBold.woff2') format('woff2');
+  font-display: swap;
+  unicode-range: U+0030-0039, U+0041-005A, U+0061-007A, U+002B, U+2212, U+00D7, U+00F7, U+0021-002F, U+003A-0040, U+005B-0060, U+007B-007E, U+20A0-20CF, U+2200-22FF;
+}
+@font-face {
+  font-family: 'NanumMJ';
+  font-style: normal;
+  font-weight: 700;
+  src: url('https://cdn.smart-aidt.com/azure/contents/resources/common_font/NanumMyeongjoBold.woff2') format('woff2');
+  font-display: swap;
+  unicode-range: U+0030-0039, U+0041-005A, U+0061-007A, U+002B, U+2212, U+00D7, U+00F7, U+0021-002F, U+003A-0040, U+005B-0060, U+007B-007E, U+20A0-20CF, U+2200-22FF;
+}
+@font-face {
+  font-family: 'NanumMJ';
+  font-style: normal;
+  font-weight: 800;
+  src: url('https://cdn.smart-aidt.com/azure/contents/resources/common_font/NanumMyeongjoExtraBold.woff2') format('woff2');
+  font-display: swap;
+  unicode-range: U+0030-0039, U+0041-005A, U+0061-007A, U+002B, U+2212, U+00D7, U+00F7, U+0021-002F, U+003A-0040, U+005B-0060, U+007B-007E, U+20A0-20CF, U+2200-22FF;
+}
+
+@font-face {
+  font-family: 'NanumMJAll';
+  font-style: normal;
+  src: url('https://cdn.smart-aidt.com/azure/contents/resources/common_font/NanumMyeongjoBold.woff2') format('woff2');
+  font-display: swap;
+} */
+
+/* Lexend (영어 메인) */
+@font-face {
+  font-family: 'Lexend';
+  font-style: normal;
+  font-weight: 100;
+  src: url('https://cdn.smart-aidt.com/azure/contents/resources/common_font/Lexend-Thin.woff2') format('woff2');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Lexend';
+  font-style: normal;
+  font-weight: 200;
+  src: url('https://cdn.smart-aidt.com/azure/contents/resources/common_font/Lexend-ExtraLight.woff2') format('woff2');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Lexend';
+  font-style: normal;
+  font-weight: 300;
+  src: url('https://cdn.smart-aidt.com/azure/contents/resources/common_font/Lexend-Light.woff2') format('woff2');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Lexend';
+  font-style: normal;
+  font-weight: 400;
+  src: url('https://cdn.smart-aidt.com/azure/contents/resources/common_font/Lexend-Regular.woff2') format('woff2');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Lexend';
+  font-style: normal;
+  font-weight: 500;
+  src: url('https://cdn.smart-aidt.com/azure/contents/resources/common_font/Lexend-Medium.woff2') format('woff2');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Lexend';
+  font-style: normal;
+  font-weight: 600;
+  src: url('https://cdn.smart-aidt.com/azure/contents/resources/common_font/Lexend-SemiBold.woff2') format('woff2');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Lexend';
+  font-style: normal;
+  font-weight: 700;
+  src: url('https://cdn.smart-aidt.com/azure/contents/resources/common_font/Lexend-Bold.woff2') format('woff2');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Lexend';
+  font-style: normal;
+  font-weight: 800;
+  src: url('https://cdn.smart-aidt.com/azure/contents/resources/common_font/Lexend-ExtraBold.woff2') format('woff2');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Lexend';
+  font-style: normal;
+  font-weight: 900;
+  src: url('https://cdn.smart-aidt.com/azure/contents/resources/common_font/Lexend-Black.woff2') format('woff2');
+  font-display: swap;
+}
+
+/* GmarketSans (영어 보조) */
+@font-face {
+  font-family: 'GmarketSans';
+  font-style: normal;
+  font-weight: 300;
+  src: url('https://cdn.smart-aidt.com/azure/contents/resources/common_font/GmarketSansLight.woff2') format('woff2');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GmarketSans';
+  font-style: normal;
+  font-weight: 500;
+  src: url('https://cdn.smart-aidt.com/azure/contents/resources/common_font/GmarketSansMedium.woff2') format('woff2');
+  font-display: swap;
+}
+@font-face {
+  font-family: 'GmarketSans';
+  font-style: normal;
+  font-weight: 700;
+  src: url('https://cdn.smart-aidt.com/azure/contents/resources/common_font/GmarketSansBold.woff2') format('woff2');
+  font-display: swap;
+}
+
+/* 나눔명조 (숫자/수식/단위) */
+/* @font-face {
+	font-weight: 300;
+	font-family: "Pretendard";
+	src: url(https://cdn.smart-aidt.com/azure/contents/resources/common_font/NanumMyeongjoBold.woff2) format("woff2");
+	font-display: swap;
+	unicode-range: U+0030-0039, U+0041-005A, U+0061-007A, U+002B, U+2212, U+00D7, U+00F7, U+0021-002F, U+003A-0040,
+		U+005B-0060, U+007B-007E, U+20A0-20CF, U+2200-22FF;
+}
+@font-face {
+	font-weight: 400;
+	font-family: "Pretendard";
+	src: url(https://cdn.smart-aidt.com/azure/contents/resources/common_font/NanumMyeongjoBold.woff2) format("woff2");
+	font-display: swap;
+	unicode-range: U+0030-0039, U+0041-005A, U+0061-007A, U+002B, U+2212, U+00D7, U+00F7, U+0021-002F, U+003A-0040,
+		U+005B-0060, U+007B-007E, U+20A0-20CF, U+2200-22FF;
+}
+@font-face {
+	font-weight: 500;
+	font-family: "Pretendard";
+	src: url(https://cdn.smart-aidt.com/azure/contents/resources/common_font/NanumMyeongjoBold.woff2) format("woff2");
+	font-display: swap;
+	unicode-range: U+0030-0039, U+0041-005A, U+0061-007A, U+002B, U+2212, U+00D7, U+00F7, U+0021-002F, U+003A-0040,
+		U+005B-0060, U+007B-007E, U+20A0-20CF, U+2200-22FF;
+}
+@font-face {
+	font-weight: 600;
+	font-family: "Pretendard";
+	src: url(https://cdn.smart-aidt.com/azure/contents/resources/common_font/NanumMyeongjoBold.woff2) format("woff2");
+	font-display: swap;
+	unicode-range: U+0030-0039, U+0041-005A, U+0061-007A, U+002B, U+2212, U+00D7, U+00F7, U+0021-002F, U+003A-0040,
+		U+005B-0060, U+007B-007E, U+20A0-20CF, U+2200-22FF;
+}
+@font-face {
+	font-weight: 700;
+	font-family: "Pretendard";
+	src: url(https://cdn.smart-aidt.com/azure/contents/resources/common_font/NanumMyeongjoBold.woff2) format("woff2");
+	font-display: swap;
+	unicode-range: U+0030-0039, U+0041-005A, U+0061-007A, U+002B, U+2212, U+00D7, U+00F7, U+0021-002F, U+003A-0040,
+		U+005B-0060, U+007B-007E, U+20A0-20CF, U+2200-22FF;
+}
+@font-face {
+	font-weight: 900;
+	font-family: "Pretendard";
+	src: url(https://cdn.smart-aidt.com/azure/contents/resources/common_font/NanumMyeongjoExtraBold.woff2)
+		format("woff2");
+	font-display: swap;
+	unicode-range: U+0030-0039, U+0041-005A, U+0061-007A, U+002B, U+2212, U+00D7, U+00F7, U+0021-002F, U+003A-0040,
+		U+005B-0060, U+007B-007E, U+20A0-20CF, U+2200-22FF;
+} */

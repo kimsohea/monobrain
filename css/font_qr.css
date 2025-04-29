@@ -1,0 +1,57 @@
+/* G마켓 서체 */
+@font-face {
+  font-family: "GmarketSans";
+  src: url("../fonts/GmarketSansLight.woff") format("woff");
+  font-weight: 300;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GmarketSans";
+  src: url("../fonts/GmarketSansMedium.woff") format("woff");
+  font-weight: 500;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GmarketSans";
+  src: url("../fonts/GmarketSansBold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: Pretendard-Regular;
+  src: url(https://fastly.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff) format("woff");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Pretendard-SemiBold";
+  font-style: normal;
+  font-format: opentype;
+  font-weight: 600;
+  src: url("../fonts/pretendard-semibold.otf");
+}
+
+@font-face {
+  font-family: "Pretendard-ExtraBold";
+  font-style: normal;
+  font-format: opentype;
+  font-weight: 800;
+  src: url("../fonts/pretendard-extrabold.otf");
+}
+
+/* 학교안심*/
+@font-face {
+  font-family: "HakgyoansimDotbogi";
+  src: url("../fonts/HakgyoansimDotbogi.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "HakgyoansimDunggeunmiso";
+  src: url("../fonts/HakgyoansimDunggeunmisoOTFB.otf");
+  font-weight: normal;
+  font-style: normal;
+}

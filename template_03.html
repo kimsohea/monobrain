@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0"
+    />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+
+    <link rel="stylesheet" href="./css/font.css" type="text/css" />
+    <link rel="stylesheet" href="./css/common.css" type="text/css" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/template03.css" />
+
+    <script src="./js/ext_library.js" type="text/javascript"></script>
+    <script src="./js/document-edit.js"></script>
+    <script src="./js/sound.js"></script>
+    <script src="./js/template03.js"></script>
+    <title>듣고CQ</title>
+    <style>
+      #content {
+        margin-top: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <div id="root">
+        <div class="content-container">
+          <div class="bg-content">
+            <figure class="left_char"><img src="./img/en/left_char.png" alt="" /></figure>
+            <figure class="right_char"><img src="./img/en/right_char.png" alt="" /></figure>
+            <ul class="ans_list ox" data-correct-answer="x">
+              <li>
+                <button class="answer" data-answer="o"></button>
+              </li>
+              <li>
+                <button class="answer" data-answer="x"></button>
+              </li>
+            </ul>
+          </div>
+          <div class="quiz_content">
+            <p class="quiz_text" lang="y">다음을 듣고, 우리말 뜻과 일치하면 O 표, 일치하지 않으면 X 표를 고르세요.</p>
+            <button type="button" class="sound" data-sound-src="EEN51_MY_Sarah_France.mp3"></button>
+            <p class="add_text" lang="y">한국</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

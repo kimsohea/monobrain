@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0"
+    />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+
+    <link rel="stylesheet" href="./css/font.css" type="text/css" />
+    <link rel="stylesheet" href="./css/common.css" type="text/css" />
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/template04.css" />
+
+    <script src="./js/ext_library.js" type="text/javascript"></script>
+    <script src="./js/document-edit.js"></script>
+    <script src="./js/sound.js"></script>
+    <script src="./js/template04.js"></script>
+    <title>단어드래그앤드롭</title>
+    <style>
+      #content {
+        margin-top: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <div id="root">
+        <div class="content-container">
+          <div class="bg-content">
+            <figure class="car"><img src="./img/en/car.png" alt="" /></figure>
+          </div>
+          <div class="question_box">
+            <ul class="string_list drag_area">
+              <li data-index="1" lang="y" draggable="true">o</li>
+              <li data-index="2" lang="y" draggable="true">s</li>
+              <li data-index="3" lang="y" draggable="true">e</li>
+              <li data-index="4" lang="y" draggable="true">m</li>
+              <li data-index="5" lang="y" draggable="true">r</li>
+              <li data-index="6" lang="y" draggable="true">t</li>
+              <li data-index="7" lang="y" draggable="true">o</li>
+              <li data-index="8" lang="y" draggable="true">r</li>
+            </ul>
+            <ul class="ans_list drop_area">
+              <li data-answer="r"></li>
+              <li data-answer="e"></li>
+              <li data-answer="s"></li>
+              <li data-answer="t"></li>
+              <li data-answer="r"></li>
+              <li data-answer="o"></li>
+              <li data-answer="o"></li>
+              <li data-answer="m"></li>
+            </ul>
+          </div>
+          <div class="quiz_content">
+            <p class="quiz_text" lang="y">그림을 보고, 글자를 바르게 배열하여 단어를 완성하세요.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

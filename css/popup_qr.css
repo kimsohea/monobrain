@@ -1,0 +1,207 @@
+/* 게임방법 팝업 */
+.how_popup {
+  display: none;
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.how_popup.active {
+  display: block;
+}
+
+.how_popup::before {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #00000050;
+  content: "";
+}
+
+.how_popup::after {
+  position: absolute;
+  z-index: 2;
+  top: 115px;
+  right: 80px;
+  width: 46px;
+  height: 42px;
+  background-color: #fff;
+  content: "";
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+
+.how_popup strong {
+  display: block;
+  padding: 5px 0 20px 50px;
+  background: 0 0 / 40px 40px no-repeat url("../img/qr_tmp/popup_tit.png");
+  font-family: "GmarketSans";
+  font-weight: 700;
+  font-size: 36px;
+}
+
+.how_popup p {
+  position: absolute;
+  top: 132px;
+  right: 60px;
+  width: 920px;
+  height: 280px;
+  box-sizing: border-box;
+  padding: 30px 50px;
+  border-radius: 25px;
+  background-color: #fff;
+  background-image: url("../img/qr_tmp/pop_close.png");
+  background-repeat: no-repeat;
+  background-position: 96.5% 30px;
+  background-size: 21px 21px;
+  box-shadow: 0 5px 0 #d9d9d9;
+  font-family: "Pretendard-SemiBold";
+  font-size: 28px;
+  line-height: 40px;
+}
+
+/* 정답 중간팝업 */
+.ans_box {
+  position: absolute;
+  display: none;
+  left: 50%;
+  top: 310px;
+  width: 257px;
+  height: 257px;
+  transform: translateX(-50%);
+  pointer-events: none;
+  background: 0 0 / 100% 100% no-repeat url("../img/qr_tmp/answer_correct.png");
+}
+
+.ans_box.correct,
+.ans_box.incorrect {
+  display: block;
+}
+
+.ans_box.incorrect {
+  background-image: url("../img/qr_tmp/answer_incorrect.png");
+}
+
+/* 정오답 다음화면 팝업 */
+.ans_popup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: none;
+  background: 50% 38% / 750px 539px no-repeat url("../img/qr_tmp/pop_correct.png") #00000050;
+  z-index: 10;
+}
+
+.ans_popup.correct,
+.ans_popup.incorrect,
+.ans_popup.restart {
+  display: block;
+}
+
+.ans_popup .pop_tit {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  height: 72px;
+  padding: 5px 20px 0;
+  margin: 0 auto 20px;
+  background: #ffebb8;
+  border-radius: 83px;
+  box-sizing: border-box;
+  font-size: 38px;
+  font-weight: 500;
+}
+
+.ans_popup .pop_ans {
+  margin-left: 10px;
+  font-weight: 700;
+}
+
+.ans_popup .pop_para {
+  display: block;
+  width: 100%;
+  height: 180px;
+  font-size: 28px;
+  word-break: keep-all;
+}
+
+.ans_popup .popup_txt {
+  text-align: center;
+  width: 720px;
+  height: 270px;
+  margin: 420px auto 0;
+  font-size: 26px;
+  word-break: keep-all;
+}
+
+.ans_popup .pop_char,
+.ans_popup .pop_ans {
+  color: rgba(230, 76, 90, 1);
+}
+
+.ans_popup .next_btn {
+  top: 525px;
+  right: 510px;
+  z-index: 5;
+  display: inline-flex;
+  background: 0 0 / 100% no-repeat url("../img/qr_tmp/next_btn_cor.png");
+  font-size: 0;
+}
+
+.ans_popup.correct .txt_cor {
+  display: block;
+}
+
+.ans_popup.incorrect,
+.ans_popup.restart {
+  background: 50% 38% / 750px 539px no-repeat url("../img/qr_tmp/pop_incorrect.png") #00000050;
+}
+
+.ans_popup.incorrect .txt_incor {
+  display: block;
+}
+
+.ans_popup.incorrect .next_btn {
+  background: 0 0 / 100% no-repeat url("../img/qr_tmp/next_btn_incor.png");
+}
+
+.ans_popup.restart .txt_re {
+  display: block;
+}
+
+.ans_popup.restart .next_btn {
+  background: 0 0 / 100% no-repeat url("../img/qr_tmp/restart_btn.png");
+}
+
+.ans_popup.correct.end .next_btn {
+  background: 0 0 / 100% no-repeat url("../img/qr_tmp/next_btn_cor_end.png");
+}
+
+.ans_popup.incorrect.end .next_btn {
+  background: 0 0 / 100% no-repeat url("../img/qr_tmp/next_btn_incor_end.png");
+}
+
+.complete_pop,
+.complete_box {
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.next_btn {
+  position: absolute;
+  width: 216px;
+  height: 58px;
+  cursor: pointer;
+}

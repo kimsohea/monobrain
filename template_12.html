@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0"
+    />
+    <link rel="stylesheet" type="text/css" href="./css/font_qr.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css" />
+    <style>
+      html,
+      body {
+        padding: 0;
+        height: 100%;
+        margin: 0;
+        overflow: hidden;
+      }
+      remote-html-embed {
+        display: block;
+        position: relative;
+        width: 80%;
+        height: 80%;
+      }
+    </style>
+  </head>
+  <body>
+    <remote-html-embed></remote-html-embed>
+
+    <template id="class--content">
+      <div id="classStyudyContent">
+        <!-- Content -->
+        <div id="wrap" class="page">
+          <section id="container">
+            <button class="how_btn">게임방법</button>
+            <div class="how_popup">
+              <p>
+                <strong>게임 방법</strong>
+                초성을 참고하여 설명에 알맞은 단어를 입력합니다.<br />
+                입력한 답이 틀릴 때마다 글자가 하나씩 공개됩니다.<br />
+                공개된 글자를 활용해서 정답을 맞혀 봅시다!
+              </p>
+            </div>
+            <!-- 변경되는 컨텐츠 시작 -->
+            <section class="home_page">
+              <h1><span class="head_01">초성</span><span class="head_02">게임</span></h1>
+              <button class="start" type="button">게임 시작</button>
+            </section>
+            <section class="game_page">
+              <h2>초성 게임</h2>
+
+              <div class="quiz_box">
+                <div class="quiz_top">
+                  <h3 class="quiz_order">1 / 5</h3>
+                  <p class="quiz_para">화면을 구성하는 가장 작은 단위로, 화소라고도 한다.</p>
+                </div>
+                <ul class="quiz_mid">
+                  <li>ㅍ</li>
+                  <li>ㅅ</li>
+                </ul>
+                <input
+                  class="quiz_input"
+                  type="text"
+                  placeholder="위에서 설명한 내용과 초성을 참고하여 정답을 입력하세요."
+                />
+              </div>
+              <div class="ans_box"></div>
+              <div class="ans_popup">
+                <p class="popup_txt">
+                  <strong class="pop_tit">정답: <span class="pop_ans">픽셀</span></strong>
+                  <span class="pop_para">화면을 구성하는 가장 작은 단위</span>
+                </p>
+                <button class="next_btn" type="button">다음 문제로</button>
+              </div>
+            </section>
+            <section class="end_page">
+              <h2>초성 게임</h2>
+              <button class="how_btn">게임방법</button>
+              <div class="how_popup">
+                <p>
+                  <strong>게임 방법</strong>
+                  초성을 참고하여 설명에 알맞은 단어를 입력합니다.<br />
+                  입력한 답이 틀릴 때마다 글자가 하나씩 공개됩니다.<br />
+                  공개된 글자를 활용해서 정답을 맞혀 봅시다!
+                </p>
+              </div>
+              <div class="quiz_box answer">
+                <h3>정답 단어를 확인해 보세요.</h3>
+                <ul class="ans_list"></ul>
+              </div>
+            </section>
+            <!-- 변경되는 컨텐츠 끝 -->
+          </section>
+        </div>
+      </div>
+
+      <!-- 복수개의 스타일 가능 -->
+      <link rel="stylesheet" type="text/css" href="./css/reset_qr.css" />
+      <link rel="stylesheet" type="text/css" href="./css/commonqr.css" />
+      <link rel="stylesheet" type="text/css" href="./css/popup_qr.css" />
+      <link rel="stylesheet" type="text/css" href="./css/template12.css" />
+
+      <!-- 복수개의 스크립트 파일 가능 -->
+      <script type="text/javascript" src="./js/jquery-3.4.1.min.js"></script>
+      <script
+        src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"
+        integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0="
+        crossorigin="anonymous"
+      ></script>
+      <script type="text/javascript" src="./js/qr/common.js"></script>
+      <script type="text/javascript" src="./js/qr/quiz_info_12.js"></script>
+      <script type="text/javascript" src="./js/qr/audioPlayer.js"></script>
+      <script type="text/javascript" src="./js/qr/template12.js"></script>
+
+      <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
+    </template>
+
+    <script type="module" src="./js/qr/shadow-dom.js"></script>
+    <!-- Page js -->
+  </body>
+</html>

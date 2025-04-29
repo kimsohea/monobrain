@@ -1,0 +1,269 @@
+@keyframes float01 {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(10px);
+  }
+}
+
+@keyframes fish-ani {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(20px);
+  }
+}
+
+/* 배경 */
+div#wrapper {
+  padding: 0;
+}
+
+.bg-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/en/bg_sky.png");
+  background-position: top centera;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.bg-content > * {
+  position: absolute;
+}
+
+/* 어부 */
+.fisherman {
+  top: 65px;
+  left: 750px;
+  width: 461px;
+  height: 209px;
+  animation: float01 2s linear 0s infinite alternate;
+}
+
+.fisherman.active {
+  animation: none;
+}
+
+.hook {
+  top: 134px;
+  left: 741px;
+  width: 30px;
+  animation: float01 2s linear 0s infinite alternate;
+}
+
+.hook.active {
+  top: 130px;
+  transform-origin: top center;
+  animation: none;
+}
+
+/* 뒷배경 물고기 */
+.fish_list li {
+  position: absolute;
+  animation: fish-ani 6s linear 0s infinite alternate;
+}
+
+.fish_list li:nth-of-type(1) {
+  top: 290px;
+  left: 240px;
+  width: 99px;
+  height: 103px;
+}
+
+.fish_list li:nth-of-type(2) {
+  top: 360px;
+  left: 1380px;
+  width: 98px;
+  height: 107px;
+}
+
+.fish_list li:nth-of-type(3) {
+  top: 630px;
+  left: 780px;
+  width: 93px;
+  height: 50px;
+}
+
+/* 선택 문제 */
+.ans_list li {
+  position: absolute;
+}
+
+.ans_left {
+  top: 390px;
+  left: 420px;
+  width: 246px;
+}
+
+.ans_left .answer {
+  top: 100px;
+  right: 160px;
+}
+
+.ans_right {
+  top: 360px;
+  left: 800px;
+  width: 414px;
+}
+
+.ans_right .answer {
+  top: 40px;
+  left: 310px;
+}
+
+.ans_left > img {
+  display: block;
+  width: 246px;
+  height: 180px;
+  animation: fish-ani 4s linear 0s infinite alternate;
+}
+
+.ans_right > img {
+  display: block;
+  width: 414px;
+  height: 101px;
+  animation: fish-ani 4s linear 0s infinite alternate;
+}
+
+.ans_list.active img {
+  animation: none;
+}
+
+.ans_list .ans_left button:hover,
+.ans_list .ans_right button:hover {
+  box-shadow: none;
+}
+
+.ans_list.active button {
+  pointer-events: none;
+}
+
+.answer {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* 이미지 문제 */
+.img {
+  width: 313px;
+  height: 291px;
+  padding-bottom: 10px;
+}
+
+.img img {
+  width: 80%;
+  height: fit-content;
+}
+
+.ans_left .img {
+  top: 50px;
+  padding-right: 30px;
+  background-image: url("../img/en/ans_img_left.png");
+}
+
+.ans_right .img {
+  padding-left: 30px;
+  background-image: url("../img/en/ans_img_right.png");
+}
+
+.ans_left .img.success {
+  background-image: url("../img/en/ans_img_left_correct.png");
+}
+
+.ans_left .img.fail {
+  background-image: url("../img/en/ans_img_left_wrong.png");
+}
+
+.ans_right .img.success {
+  background-image: url("../img/en/ans_img_right_correct.png");
+}
+
+.ans_right .img.fail {
+  background-image: url("../img/en/ans_img_right_wrong.png");
+}
+
+/* 문제 단락 */
+.quiz_content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 235px;
+}
+
+.quiz_content .quiz_text {
+  position: absolute;
+  top: 90px;
+  left: 40px;
+  width: 700px;
+  font-family: "Lexend", "Pretendard";
+  font-weight: 900;
+  font-size: 46px;
+  line-height: 62px;
+  word-break: keep-all;
+  color: #fff;
+}
+
+.quiz_content .sound {
+  position: absolute;
+  top: 180px;
+  left: 1030px;
+  width: 99px;
+  height: 109px;
+  background: 50% 50% / 100% url("../img/en/sound_btn.png") no-repeat;
+  z-index: 2;
+}
+
+.sound.notice_text::before {
+  position: absolute;
+  top: 20px;
+  left: 120px;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 295px;
+  height: 70px;
+  background: #fff;
+  color: #7d2eff;
+  font-family: "Pretendard";
+  font-size: 30px;
+  font-weight: 700;
+  content: "듣고 문제를 푸세요";
+  border-radius: 20px;
+  outline: 10px dotted #7d2eff;
+  outline-offset: -5px;
+}
+
+.sound.notice_text.active::before {
+  display: flex;
+}
+
+.quiz_content button.sound:hover {
+  box-shadow: none;
+}
+
+.quiz_content .add_text {
+  position: absolute;
+  top: 50px;
+  left: 1075px;
+  display: block;
+  width: 577px;
+  height: 160px;
+  padding: 40px 50px;
+  background: center / 100% url("../img/en/sound_text_box.png") no-repeat;
+  font-family: "Lexend", "Pretendard";
+  font-weight: 900;
+  color: #005aad;
+  font-size: 34px;
+  line-height: 40px;
+  letter-spacing: -0.5px;
+}

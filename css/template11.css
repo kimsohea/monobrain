@@ -1,0 +1,218 @@
+@charset "utf-8";
+
+.home_page {
+  background: 100% /100% 100% no-repeat url("../img/qr/main_bg01.png");
+}
+
+.home_page .head_01 {
+  background: -webkit-linear-gradient(#f26829, #8c3c18);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 3px #fff;
+}
+
+.home_page .head_02 {
+  -webkit-text-stroke: 3px #f26829;
+}
+
+.home_page .start {
+  background: 0 0 / 100% no-repeat url("../img/qr/start_btn01.png");
+}
+
+.game_page,
+.end_page {
+  background-color: #f1e8dc;
+}
+
+.game_page h2,
+.end_page h2 {
+  width: 320px;
+  background-image: url("../img/qr/quiz_title01.png");
+}
+
+.how_btn {
+  background: 50% 50% /50% no-repeat url("../img/qr_tmp/how_text.png") #f26829;
+  box-shadow: 4px 4px 0 #ffa369;
+}
+
+.quiz_box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 1420px;
+  height: 617px;
+  margin: 40px auto 0;
+  border-radius: 40px;
+  background-color: #fff;
+  box-shadow: 0 10px 0 #d8d7d5;
+}
+
+.quiz_top {
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 40px;
+  pointer-events: none;
+}
+
+.quiz_top.active {
+  pointer-events: auto;
+}
+
+.ans_txt {
+  font-size: 36px;
+  font-weight: 500;
+}
+
+.ans_input {
+  display: block;
+  width: 503px;
+  height: 82px;
+  margin: 0 20px 0 10px;
+  padding: 0 0 0 25px;
+  box-sizing: border-box;
+  border-radius: 15px;
+  box-shadow: 3px 3px 4px rgba(0, 0, 0, 0.2);
+  background: 0 0 / 100% 100% no-repeat url("../img/qr/input_bg.png");
+  font-family: "GmarketSans";
+  font-size: 40px;
+  font-weight: 500;
+}
+
+.ans_input:focus {
+  outline: 0;
+}
+
+.ans_btn {
+  display: block;
+  width: 120px;
+  height: 58px;
+  background: none;
+  pointer-events: none;
+}
+
+.active .ans_btn {
+  background: 0 0 / 100% no-repeat url("../img/qr/input_btn.png");
+}
+
+.active .ans_btn.active {
+  pointer-events: auto;
+  cursor: pointer;
+  background: 0 0 / 100% no-repeat url("../img/qr/input_btn_active.png");
+}
+
+.ans_icon {
+  position: absolute;
+  left: 50%;
+  display: block;
+  width: 40px;
+  height: 40px;
+  background: 0 0 / 100% no-repeat url("../img/qr/emoji1.png");
+  transform: translateX(-75%);
+}
+
+.active .ans_icon {
+  display: none;
+}
+
+.quiz_char {
+  display: flex;
+  column-gap: 28px;
+}
+
+.quiz_char li {
+  width: 240px;
+}
+
+.quiz_char li figure {
+  display: block;
+  width: 170px;
+  height: 230px;
+  margin: 0 auto;
+}
+
+.txt_box {
+  display: flex;
+  align-items: center;
+  height: 198px;
+  padding: 20px 20px 60px;
+  font-size: 22px;
+  text-align: center;
+  line-height: 32px;
+  word-break: keep-all;
+  letter-spacing: -1px;
+  background: 0 0 /100% no-repeat url("../img/qr/text_box.png");
+}
+
+.quiz_char .active .txt_box {
+  background: 0 0 /100% no-repeat url("../img/qr/text_box_active.png");
+}
+
+.char1 .char {
+  background: 0 0 /100% no-repeat url("../img/qr/char1.png");
+}
+
+.char2 .char {
+  background: 0 0 /100% no-repeat url("../img/qr/char2.png");
+}
+
+.char3 .char {
+  background: 0 0 /100% no-repeat url("../img/qr/char3.png");
+}
+
+.char4 .char {
+  background: 0 0 /100% no-repeat url("../img/qr/char4.png");
+}
+
+.char5 .char {
+  background: 0 0 /100% no-repeat url("../img/qr/char5.png");
+}
+
+.char1.click .char {
+  background-image: url("../img/qr/char1_click.png");
+}
+
+.char2.click .char {
+  background-image: url("../img/qr/char2_click.png");
+}
+
+.char3.click .char {
+  background-image: url("../img/qr/char3_click.png");
+}
+
+.char4.click .char {
+  background-image: url("../img/qr/char4_click.png");
+}
+
+.char5.click .char {
+  background-image: url("../img/qr/char5_click.png");
+}
+
+.char1.active .char {
+  background-image: url("../img/qr/char1_active.png");
+}
+
+.char2.active .char {
+  background-image: url("../img/qr/char2_active.png");
+}
+
+.char3.active .char {
+  background-image: url("../img/qr/char3_active.png");
+}
+
+.char4.active .char {
+  background-image: url("../img/qr/char4_active.png");
+}
+
+.char5.active .char {
+  background-image: url("../img/qr/char5_active.png");
+}
+
+.ans_list strong {
+  color: #f26829;
+}
+
+.ans_list strong::before {
+  border: 4px solid #f26829;
+  background: 50% 50% / 70% no-repeat url("../img/qr/check01.png");
+}

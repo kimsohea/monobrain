@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0 user-scalable=0"
+    />
+    <link rel="stylesheet" type="text/css" href="./css/font_qr.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css" />
+    <style>
+      html,
+      body {
+        padding: 0;
+        height: 100%;
+        margin: 0;
+        overflow: hidden;
+      }
+      remote-html-embed {
+        display: block;
+        position: relative;
+        width: 80%;
+        height: 80%;
+      }
+    </style>
+  </head>
+  <body>
+    <remote-html-embed></remote-html-embed>
+
+    <template id="class--content">
+      <div id="classStyudyContent">
+        <!-- Content -->
+        <div id="wrap" class="page">
+          <section id="container">
+            <button class="how_btn">게임방법</button>
+            <div class="how_popup">
+              <p>
+                <strong>게임 방법</strong>
+                파란색 칸을 클릭했을 때 나오는 글을 읽고 <br />
+                해당 낱말을 찾아 한 글자씩 클릭해 보자.
+              </p>
+            </div>
+            <!-- 변경되는 컨텐츠 시작 -->
+            <section class="home_page">
+              <h1><span class="head_01">가로세로 낱말</span><span class="head_02">게임</span></h1>
+              <button class="start" type="button">게임 시작</button>
+            </section>
+            <section class="game_page">
+              <h2>가로세로 낱말 게임</h2>
+
+              <div class="board">
+                <ol class="quiz_order">
+                  <li>1</li>
+                  <li>2</li>
+                  <li>3</li>
+                  <li>4</li>
+                  <li>5</li>
+                  <li>6</li>
+                </ol>
+                <ul class="quiz_item quiz_1">
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+                <ul class="quiz_item quiz_2">
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+                <ul class="quiz_item quiz_3">
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+                <ul class="quiz_item quiz_4">
+                  <li></li>
+                  <li></li>
+                </ul>
+                <ul class="quiz_item quiz_5">
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+                <ul class="quiz_item quiz_6">
+                  <li></li>
+                  <li></li>
+                  <li></li>
+                </ul>
+              </div>
+              <div class="quiz_box">
+                <strong class="order">가로 1</strong>
+                <span class="star">3</span>
+                <p class="quiz_para">
+                  두 개의 인덱스로 범위를 지정하여 리스트의 요소를 가져오며, 실행 결과는 항상 리스트가 된다.
+                </p>
+                <ul class="keyboard active">
+                  <li>트</li>
+                  <li>라</li>
+                  <li>리</li>
+                  <li>브</li>
+                  <li>그</li>
+                  <li>래</li>
+                  <li>인</li>
+                  <li>이</li>
+                  <li>프</li>
+                  <li>슬</li>
+                  <li>러</li>
+                  <li>스</li>
+                  <li>싱</li>
+                  <li>클</li>
+                </ul>
+              </div>
+              <div class="complete_pop">
+                <button class="next_btn"></button>
+              </div>
+            </section>
+            <section class="end_page">
+              <h2></h2>
+              <div class="quiz_box answer">
+                <h3>정답 단어를 확인해 보세요.</h3>
+                <ul class="ans_list"></ul>
+              </div>
+            </section>
+            <!-- 변경되는 컨텐츠 끝 -->
+          </section>
+        </div>
+      </div>
+
+      <!-- 복수개의 스타일 가능 -->
+      <link rel="stylesheet" type="text/css" href="./css/reset_qr.css" />
+      <link rel="stylesheet" type="text/css" href="./css/commonqr.css" />
+      <link rel="stylesheet" type="text/css" href="./css/popup_qr.css" />
+      <link rel="stylesheet" type="text/css" href="./css/template13.css" />
+
+      <!-- 복수개의 스크립트 파일 가능 -->
+      <script type="text/javascript" src="./js/jquery-3.4.1.min.js"></script>
+      <script
+        src="https://code.jquery.com/ui/1.13.2/jquery-ui.min.js"
+        integrity="sha256-lSjKY0/srUM9BE3dPm+c4fBo1dky2v27Gdjm2uoZaL0="
+        crossorigin="anonymous"
+      ></script>
+      <script type="text/javascript" src="./js/qr/common.js"></script>
+      <script type="text/javascript" src="./js/qr/quiz_info_13.js"></script>
+      <script type="text/javascript" src="./js/qr/audioPlayer.js"></script>
+      <script type="text/javascript" src="./js/qr/template13.js"></script>
+
+      <script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
+    </template>
+
+    <script type="module" src="./js/qr/shadow-dom.js"></script>
+    <!-- Page js -->
+  </body>
+</html>

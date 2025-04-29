@@ -1,0 +1,272 @@
+@keyframes question_ani {
+  0% {
+    transform: scale(-0.1);
+  }
+  95% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes car_ani_start {
+  from {
+    transform: translateX(-200px);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes car_ani_stop {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(650px);
+  }
+}
+
+@keyframes car_ani_end {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(1250px);
+  }
+}
+
+/* 배경 */
+div#wrapper {
+  padding: 0;
+}
+
+.bg-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/en/bg_road.png");
+  background-position: top center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.bg-content > * {
+  position: absolute;
+}
+
+.bg-content .car {
+  position: absolute;
+  left: 0;
+  bottom: 30px;
+  animation: car_ani_start 0.3s linear forwards;
+}
+
+.bg-content.active-incorrect .car {
+  animation: car_ani_stop 1s ease-out forwards;
+}
+
+.bg-content.active-correct .car {
+  animation: car_ani_end 1s ease-out forwards;
+}
+
+.question_box {
+  position: absolute;
+  top: 180px;
+  left: 145px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  row-gap: 30px;
+  width: 1411px;
+  height: 399px;
+  transform: rotateY(90deg) rotateX(90deg) rotateZ(90deg);
+  background: center center / 100% 100% no-repeat url("../img/en/quiz_box.png");
+  animation: question_ani 0.5s linear 0.5s forwards;
+}
+
+.question_box ul {
+  display: flex;
+  column-gap: 6px;
+}
+
+.question_box li {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 110px;
+  box-sizing: border-box;
+  font-family: "Lexend", "Pretendard";
+  font-size: 64px;
+  font-weight: 900;
+  color: #4e4e4e;
+}
+
+.question_box.word ul {
+  column-gap: 100px;
+}
+
+.question_box.word.over_4 ul,
+.question_box.word.over_7 ul {
+  column-gap: 70px;
+}
+
+.over_4 li {
+  font-size: 45px;
+}
+
+.question_box.word.over_4 li {
+  min-width: 100px;
+}
+
+.question_box.word.over_4 .ans_list li {
+  width: 150px;
+}
+
+.over_7 li {
+  font-size: 35px;
+  letter-spacing: -2px;
+}
+
+.question_box.word.over_7 li {
+  min-width: 85px;
+}
+
+.question_box.word.over_7 .ans_list li {
+  width: 100px;
+}
+
+.question_box.over_7 span {
+  font-size: 35px;
+  letter-spacing: -2px;
+}
+
+.question_box.word li {
+  position: relative;
+  width: fit-content;
+  min-width: 200px;
+  padding-top: 0;
+  background-size: 100% 100%;
+  background-image: none;
+}
+
+.question_box li::before {
+  position: absolute;
+  z-index: -2;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: #febc3f;
+  box-shadow: 0 0 30px 5px #fda311 inset;
+  border-radius: 20px;
+  content: "";
+}
+
+.question_box li::after {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  width: calc(100% - 20px);
+  height: calc(100% - 20px);
+  outline: 2px dotted #febc3f;
+  outline-offset: -5px;
+  border-radius: 15px;
+  background-color: #fff;
+  z-index: -1;
+  content: "";
+}
+
+.question_box.word li::before {
+  left: -30px;
+  width: calc(100% + 60px);
+}
+
+.question_box.word li::after {
+  left: -15px;
+  width: calc(100% + 30px);
+}
+
+.question_box.word .ans_list li {
+  width: 200px;
+  background-image: none;
+}
+
+.string_list li.active:before,
+.ans_list li::before {
+  background-color: #cecece;
+  box-shadow: 0 0 30px 5px #c3c3c3 inset;
+}
+
+.string_list li.active:after,
+.ans_list li:after {
+  outline: 2px dotted #cecece;
+}
+
+.question_box.word .ans_list li.active {
+  width: fit-content;
+}
+
+.ans_list li.active::before {
+  background-color: #febc3f;
+  box-shadow: 0 0 30px 5px #fda311 inset;
+}
+
+.ans_list li.active::after {
+  outline: 2px dotted #febc3f;
+}
+
+.string_list li {
+  z-index: 5;
+  cursor: pointer;
+  pointer-events: visible;
+}
+
+.string_list li.active {
+  pointer-events: none;
+  font-size: 0;
+}
+
+.ans_list li.active.correct {
+  color: #149ed1;
+}
+
+.ans_list li.active.incorrect {
+  color: #ff4d6a;
+}
+
+.question_box span {
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 40px;
+  font-weight: 700;
+  white-space: pre;
+}
+
+/* 문제 단락 */
+.quiz_content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 235px;
+}
+
+.quiz_content .quiz_text {
+  position: absolute;
+  top: 70px;
+  left: 40px;
+  width: 1630px;
+  font-family: "Lexend", "Pretendard";
+  font-weight: 900;
+  font-size: 46px;
+  line-height: 62px;
+  word-break: keep-all;
+  color: #fff;
+}

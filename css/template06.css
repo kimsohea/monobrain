@@ -1,0 +1,273 @@
+/* 애니메이션 */
+@keyframes go_right {
+  from {
+    background-position-x: 1px;
+  }
+  to {
+    background-position-x: 26px;
+  }
+}
+
+@keyframes left_pizza {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(300px);
+  }
+}
+
+@keyframes right_pizza_correct {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(400px);
+  }
+}
+
+@keyframes right_pizza_incorrect {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(515px);
+  }
+}
+
+/* 배경 */
+div#wrapper {
+  padding: 0;
+}
+
+.bg-content {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/en/bg_store.png");
+  background-position: top center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.bg-content > * {
+  position: absolute;
+}
+
+.conveyor {
+  top: 261px;
+  left: 50%;
+  width: 1579px;
+  height: 355px;
+  background-position-x: 1px;
+  background-image: url("../img/en/bg_conveyor.png");
+  background-repeat: repeat-x;
+  transform: translateX(-50%);
+}
+
+.bg-content.active .conveyor {
+  animation: go_right 0.75s 5 steps(3, start);
+}
+
+.bg-content.active .pizza_left {
+  animation: left_pizza 2s forwards steps(10, start);
+}
+
+.bg-content.active .pizza_right.correct {
+  animation: right_pizza_correct 2s forwards steps(10, start) 2s;
+}
+
+.bg-content.active .pizza_right.incorrect {
+  animation: right_pizza_incorrect 2s forwards steps(10, start) 2s;
+}
+
+.pizza_left {
+  bottom: 160px;
+  left: 90px;
+}
+
+.pizza_right {
+  bottom: 160px;
+  left: 840px;
+}
+
+.text_box {
+  height: 100%;
+  width: 100%;
+  left: 0;
+  top: 0;
+  pointer-events: none;
+}
+
+.button_box {
+  position: absolute;
+  top: 625px;
+  left: 50%;
+  width: 753px;
+  height: 99px;
+  display: flex;
+  justify-content: space-between;
+  transform: translateX(-50%);
+}
+
+.button_box button {
+  width: 133px;
+  height: 89px;
+  border-radius: 44px;
+  font-family: "Lexend", "Pretendard";
+  font-size: 40px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  color: #fff;
+  background-color: #ff5a08;
+  box-shadow: 0 10px 0 #be843f;
+}
+
+.button_box button.hint:hover,
+.button_box button.submit:hover {
+  box-shadow: 0 10px 0 #be843f;
+}
+
+.button_box .hint {
+  background-color: #69c928;
+}
+
+.button_box .hint_txt {
+  position: absolute;
+  top: 0px;
+  left: 150px;
+  display: none;
+  justify-content: flex-start;
+  align-items: center;
+  width: 425px;
+  height: 90px;
+  font-family: "Lexend", "Pretendard";
+  font-size: 30px;
+  color: #fff;
+}
+
+.button_box .hint_txt.active {
+  display: flex;
+}
+
+.ans_box {
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  width: 690px;
+  height: 270px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  row-gap: 20px;
+  transform: translateX(-50%);
+}
+
+.ans_box * {
+  height: fit-content;
+  font-family: "Lexend", "Pretendard";
+  font-size: 48px;
+  font-weight: 900;
+  color: #4e4e4e;
+}
+
+.deco_rect {
+  display: inline-flex;
+  width: 290px;
+  height: 50px;
+  margin-bottom: -7.5px;
+  border-radius: 10px;
+  border: 5px solid #e6e6e6;
+}
+
+.ans_overflow {
+  display: block;
+  overflow-y: scroll;
+  font-family: "Lexend", "Pretendard";
+}
+
+.ans_overflow p {
+  font-size: 40px;
+}
+
+.ans_box.word {
+  flex-direction: row;
+  align-items: center;
+  column-gap: 20px;
+}
+
+.ans_box.word .answer_text {
+  width: 350px;
+  left: 74%;
+}
+
+.ans_box.word > * {
+  flex: 1;
+}
+
+.ans_box.img {
+  width: 400px;
+  left: calc(50% + 150px);
+}
+
+.ans_box.img img {
+  position: absolute;
+  top: 45%;
+  left: -290px;
+  width: 250px;
+  transform: translateY(-50%);
+}
+
+input.ans_type {
+  width: 100%;
+  font-size: 38px;
+  height: 109px;
+  box-sizing: border-box;
+  border: 10px solid #e6e6e6;
+  border-radius: 20px;
+}
+
+input.ans_type.succes {
+  border-color: #2ec7ff;
+  color: #149ed1;
+}
+
+input.ans_type.fail {
+  color: #ff4d6a;
+  border-color: #ff627c;
+}
+
+.answer_text {
+  position: absolute;
+  left: 50%;
+  bottom: -50px;
+  width: 100%;
+  color: #ff4d6a;
+  font-size: 38px;
+  font-weight: 700;
+  text-align: center;
+  transform: translateX(-50%);
+}
+
+/* 문제 단락 */
+.quiz_content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 235px;
+}
+
+.quiz_content .quiz_text {
+  position: absolute;
+  top: 70px;
+  left: 40px;
+  width: 1630px;
+  font-family: "Lexend", "Pretendard";
+  font-weight: 900;
+  font-size: 46px;
+  line-height: 62px;
+  word-break: keep-all;
+  color: #fff;
+}

@@ -1,0 +1,173 @@
+/* 배경 */
+div#wrapper {
+  padding: 0;
+}
+
+.bg-content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../img/en/bg_stage.png");
+  background-position: top center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.bg-content.active {
+  background: 50% -30% / 55.5% 90% no-repeat url("../img/en/bg_light.png"), 100% no-repeat url("../img/en/bg_stage.png");
+}
+
+.left_char {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.right_char {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 238px;
+}
+
+.right_char img {
+  width: 100%;
+}
+
+.ans_list {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  display: flex;
+  column-gap: 20px;
+  transform: translateX(-50%);
+}
+
+.ans_list.ox li:nth-of-type(1) .answer {
+  background: center / 110px no-repeat url("../img/en/ans_o.png") #fff;
+}
+.ans_list.ox li:nth-of-type(2) .answer {
+  background: center / 100px no-repeat url("../img/en/ans_x.png") #fff;
+}
+
+.ans_list .answer.fail {
+  border-color: #ff617b;
+  color: #ff4d6a;
+}
+
+.ans_list .answer.success {
+  border-color: #2dc7ff;
+  color: #149ed1;
+}
+
+.ans_list .answer.select {
+  border-color: #7f7f7f;
+}
+
+.answer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 371px;
+  height: 161px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 30px;
+  font-family: "Lexend", "Pretendard";
+  font-size: 40px;
+  line-height: 45px;
+  font-weight: 900;
+  color: #4e4e4e;
+  border: 10px solid #e6e6e6;
+  box-sizing: border-box;
+}
+
+.answer::before {
+  position: absolute;
+  top: -68px;
+  left: 50%;
+  width: 153px;
+  height: 77px;
+  transform: translateX(-50%);
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  content: "";
+  z-index: -1;
+}
+
+.ans_list li:nth-of-type(1) .answer::before {
+  background-image: url("../img/en/ans_yellow.png");
+}
+
+.ans_list li:nth-of-type(2) .answer::before {
+  background-image: url("../img/en/ans_blue.png");
+}
+
+.ans_list li:nth-of-type(3) .answer::before {
+  background-image: url("../img/en/ans_red.png");
+}
+
+/* 문제 단락 */
+.quiz_content {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 235px;
+}
+
+.quiz_content .quiz_text {
+  position: absolute;
+  top: 70px;
+  left: 40px;
+  width: 1500px;
+  font-family: "Lexend", "Pretendard";
+  font-weight: 900;
+  font-size: 46px;
+  line-height: 62px;
+  word-break: keep-all;
+  color: #fff;
+}
+
+.quiz_content .sound {
+  position: absolute;
+  top: 280px;
+  left: 50%;
+  width: 165px;
+  height: 180px;
+  background: 50% 50% / 100% url("../img/en/sound_btn.png") no-repeat;
+  transform: translateX(-50%);
+  z-index: 2;
+}
+
+.sound.remove {
+  display: none;
+}
+
+.quiz_content button.sound:hover {
+  box-shadow: none;
+}
+
+.quiz_content .add_text {
+  position: absolute;
+  top: 310px;
+  left: 50%;
+  display: none;
+  font-family: "Lexend", "Pretendard";
+  font-weight: 900;
+  color: #fff;
+  transform: translateX(-50%);
+  font-size: 65px;
+  word-break: keep-all;
+  text-align: center;
+  line-height: 80px;
+  letter-spacing: -0.5px;
+}
+
+.add_text.active {
+  display: block;
+}
