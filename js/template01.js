@@ -10,11 +10,11 @@ function answerEvent(repeat) {
       if (!repeat) {
         repeat++;
         if (answer === btn_answer) {
-          playAudio(cor_audio, audioCache);
+          Sound.correct();
           fishSuccess(btn_answer);
           cor_answer.addClass("success");
         } else {
-          playAudio(incor_audio, audioCache);
+          Sound.incorrect();
           fishFail(btn_answer);
           cor_answer.addClass("fail");
         }
@@ -98,16 +98,14 @@ function fishFail(dir) {
 
 function quizAudioEvent() {
   $(".quiz_content .sound").on("click touchstart", function () {
-    let sound_src = $(this).attr("data-sound-src");
     if ($(this).hasClass("notice_text")) $(this).removeClass("notice_text");
-    playAudio(sound_src, audioCache);
-
-    let path = "../audio/";
-    audioCache[path + sound_src].addEventListener("ended", function () {
-      $(".ans_list .answer").removeClass("not-active");
-      answerEvent(answerRepeat);
-    });
+    Sound.runnyNose(timer, endFunc);
   });
+}
+
+function endFunc() {
+  $(".ans_list .answer").removeClass("not-active");
+  answerEvent(answerRepeat);
 }
 
 function beforeClick() {
@@ -116,7 +114,7 @@ function beforeClick() {
   }
 }
 
-let audioCache = {};
+let timer = [];
 let answerRepeat = 0;
 
 $(document).ready(function () {

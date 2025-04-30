@@ -7,13 +7,13 @@ function answerEvent(repeat) {
     if (!repeat) {
       repeat++;
       if (answer === btn_answer) {
-        playAudio(cor_audio, audioCache);
+        Sound.correct();
         $(".left_char img").attr("src", "./img/en/left_char_cor.png");
         $(".right_char img").attr("src", "./img/en/right_char_cor.png");
         $(".bg-content").addClass("active");
         cor_answer.addClass("success");
       } else {
-        playAudio(incor_audio, audioCache);
+        Sound.incorrect();
         $(".left_char img").attr("src", "./img/en/left_char_incor.png");
         $(".right_char img").attr("src", "./img/en/right_char_incor.png");
         cor_answer.addClass("fail");
@@ -25,28 +25,30 @@ function answerEvent(repeat) {
   });
 }
 
-function quizAudioEvent(repeat) {
+function quizAudioEvent() {
   $(".quiz_content .sound").on("click touchstart", function () {
-    let sound_src = $(this).attr("data-sound-src");
-    playAudio(sound_src, audioCache);
-
-    let path = "../audio/";
-    audioCache[path + sound_src].addEventListener("ended", function () {
-      $(".quiz_content .sound").addClass("remove");
-      $(".quiz_content .add_text").addClass("active");
-      answerEvent(repeat);
-    });
+    if (timerRepeat === 0) {
+      timerRepeat++;
+      Sound.spell(timer, endFunc);
+    }
   });
 }
 
-let audioCache = {};
+function endFunc() {
+  $(".quiz_content .sound").addClass("remove");
+  $(".quiz_content .add_text").addClass("active");
+  answerEvent(answerRepeat);
+}
+
+let timer = [];
+let answerRepeat = 0;
+let timerRepeat = 0;
 
 $(document).ready(function () {
   wrapContents();
   window.addEventListener("resize", resizer);
   window.addEventListener("DOMContentLoaded", resizer);
 
-  let answerRepeat = 0;
-  quizAudioEvent(answerRepeat);
+  quizAudioEvent();
   $(".quiz_content .quiz_text").css("textShadow", calculateStrokeTextCSS("6f33e8"));
 });
