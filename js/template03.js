@@ -29,7 +29,7 @@ function quizAudioEvent() {
   $(".quiz_content .sound").on("click touchstart", function () {
     if (timerRepeat === 0) {
       timerRepeat++;
-      Sound.spell(timer, endFunc);
+      Sound.france(timer, endFunc);
     }
   });
 }
