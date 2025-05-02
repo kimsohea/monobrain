@@ -151,6 +151,7 @@
   right: 510px;
   z-index: 5;
   display: inline-flex;
+  border-radius: 20px;
   background: 0 0 / 100% no-repeat url("../img/qr_tmp/next_btn_cor.png");
   font-size: 0;
 }
@@ -204,4 +205,5 @@
   width: 216px;
   height: 58px;
   cursor: pointer;
+  border-radius: 20px;
 }

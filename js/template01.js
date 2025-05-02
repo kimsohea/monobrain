@@ -27,7 +27,7 @@ function answerEvent(repeat) {
 function fishSuccess(dir) {
   let timeLine = gsap.timeline();
   $(".hook").addClass("active");
-  $(".hook img").attr("src", "../img/en/hook_move.png");
+  $(".hook img").attr("src", "./img/en/hook_move.png");
   if (dir === "1") {
     timeLine
       .to(".ans_left>img", { x: 100, y: 80, rotation: 5 }, 0)
